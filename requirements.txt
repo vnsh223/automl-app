@@ -1,7 +1,5 @@
-streamlist
+streamlit
 pandas
 numpy
-scikit-learn
-mljar-supervised
 matplotlib
 seaborn
