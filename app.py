@@ -1,23 +1,19 @@
-import streamlit as st
-import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
 
-st.title("🚀 AutoML Web Application")
+if st.button("Train Model"):
 
-uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
+    X = df.drop(columns=[target])
+    y = df[target]
 
-if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
 
-    st.write("### Dataset Preview")
-    st.write(df.head())
+    model = RandomForestClassifier()
+    model.fit(X_train, y_train)
 
-    target = st.selectbox("Select Target Column", df.columns)
+    accuracy = model.score(X_test, y_test)
 
-    if st.button("Train Model"):
-
-        X = df.drop(columns=[target])
-        y = df[target]
-
-        st.write("Training started... Please wait ⏳")
-
-        st.success("Model Training Completed ✅")
+    st.success("Model Training Completed ✅")
+    st.write("Model Accuracy:", accuracy)
