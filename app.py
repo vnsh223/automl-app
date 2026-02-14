@@ -18,7 +18,7 @@ if uploaded_file is not None:
     # Select target column
     target = st.selectbox("Select Target Column", df.columns)
 
-    # Train button (ONLY ONE BUTTON
+    # Train button (ONLY ONE BUTTON)
     if st.button("Train Model"):
 
     X = df.drop(columns=[target])
