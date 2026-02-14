@@ -1,0 +1,16 @@
+if (Academic_Level > 0.5) and (Academic_Level > 1.5) and (Mental_Health_Score > 4.5) then class: 20 (proba: 48.99%) | based on 247 samples
+
+if (Academic_Level <= 0.5) and (Student_ID <= 575.0) and (Conflicts_Over_Social_Media > 1.5) then class: 21 (proba: 51.5%) | based on 167 samples
+
+if (Academic_Level <= 0.5) and (Student_ID > 575.0) and (Country <= 63.0) then class: 22 (proba: 46.15%) | based on 26 samples
+
+if (Academic_Level <= 0.5) and (Student_ID <= 575.0) and (Conflicts_Over_Social_Media <= 1.5) then class: 22 (proba: 50.0%) | based on 26 samples
+
+if (Academic_Level <= 0.5) and (Student_ID > 575.0) and (Country > 63.0) then class: 23 (proba: 47.83%) | based on 23 samples
+
+if (Academic_Level > 0.5) and (Academic_Level > 1.5) and (Mental_Health_Score <= 4.5) then class: 19 (proba: 88.89%) | based on 18 samples
+
+if (Academic_Level > 0.5) and (Academic_Level <= 1.5) and (Relationship_Status <= 1.5) then class: 19 (proba: 57.14%) | based on 14 samples
+
+if (Academic_Level > 0.5) and (Academic_Level <= 1.5) and (Relationship_Status > 1.5) then class: 18 (proba: 91.67%) | based on 12 samples
+

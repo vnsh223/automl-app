@@ -1,0 +1,13 @@
+feature,mean_importance
+Relationship_Status,0.0
+Country,0.0014808809116638288
+Affects_Academic_Performance,0.002964688532940807
+Conflicts_Over_Social_Media,0.0046500672552412855
+Mental_Health_Score,0.005268979837654997
+Sleep_Hours_Per_Night,0.009241979957066526
+Addicted_Score,0.009902643003201738
+Gender,0.026005758791638068
+Avg_Daily_Usage_Hours,0.02841793024368211
+Most_Used_Platform,0.030135629836894662
+Student_ID,1.2476122706198733
+Academic_Level,14.870596869085656

@@ -1,0 +1,6 @@
+if (task_2 > 1.5) then class: HOF (proba: 100.0%) | based on 1,368 samples
+
+if (task_2 <= 1.5) and (task_2 > 0.5) then class: NOT (proba: 100.0%) | based on 1,006 samples
+
+if (task_2 <= 1.5) and (task_2 <= 0.5) then class: HOF (proba: 100.0%) | based on 508 samples
+

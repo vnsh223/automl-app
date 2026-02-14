@@ -126,3 +126,4 @@ Stay up-to-date with the latest updates about MLJAR 🎨🤖 by following us on 
 
 
 ### Good luck with ML training!
+"# automl-app" 

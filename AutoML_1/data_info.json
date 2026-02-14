@@ -1,0 +1,33 @@
+{
+    "columns": [
+        "Unnamed: 0",
+        "_id",
+        "text",
+        "task_2"
+    ],
+    "rows": 3843,
+    "cols": 4,
+    "target_is_numeric": false,
+    "columns_info": {
+        "Unnamed: 0": [
+            "scale"
+        ],
+        "_id": [
+            "text_transform"
+        ],
+        "text": [
+            "text_transform"
+        ],
+        "task_2": [
+            "categorical",
+            "few_categories"
+        ]
+    },
+    "target_info": [
+        "convert_0_1"
+    ],
+    "n_features": 4,
+    "is_sample_weighted": false,
+    "is_fairness_applied": false,
+    "n_classes": 2
+}

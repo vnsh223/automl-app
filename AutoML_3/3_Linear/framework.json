@@ -1,0 +1,388 @@
+{
+    "uid": "fffa661f-b715-459a-8364-1558808a10fa",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Gender": {
+                            "Female": 0,
+                            "Male": 1
+                        },
+                        "Academic_Level": {
+                            "Graduate": 0,
+                            "High School": 1,
+                            "Undergraduate": 2
+                        },
+                        "Country": {
+                            "Afghanistan": 0,
+                            "Albania": 1,
+                            "Argentina": 2,
+                            "Armenia": 3,
+                            "Australia": 4,
+                            "Austria": 5,
+                            "Bahamas": 6,
+                            "Bahrain": 7,
+                            "Bangladesh": 8,
+                            "Belarus": 9,
+                            "Belgium": 10,
+                            "Bhutan": 11,
+                            "Bolivia": 12,
+                            "Bosnia": 13,
+                            "Brazil": 14,
+                            "Bulgaria": 15,
+                            "Canada": 16,
+                            "Chile": 17,
+                            "China": 18,
+                            "Colombia": 19,
+                            "Costa Rica": 20,
+                            "Cyprus": 21,
+                            "Czech Republic": 22,
+                            "Denmark": 23,
+                            "Ecuador": 24,
+                            "Egypt": 25,
+                            "Estonia": 26,
+                            "Finland": 27,
+                            "France": 28,
+                            "Georgia": 29,
+                            "Germany": 30,
+                            "Ghana": 31,
+                            "Greece": 32,
+                            "Hungary": 33,
+                            "India": 34,
+                            "Indonesia": 35,
+                            "Iraq": 36,
+                            "Ireland": 37,
+                            "Israel": 38,
+                            "Italy": 39,
+                            "Jamaica": 40,
+                            "Japan": 41,
+                            "Jordan": 42,
+                            "Kenya": 43,
+                            "Kosovo": 44,
+                            "Kuwait": 45,
+                            "Kyrgyzstan": 46,
+                            "Latvia": 47,
+                            "Lebanon": 48,
+                            "Liechtenstein": 49,
+                            "Lithuania": 50,
+                            "Luxembourg": 51,
+                            "Malaysia": 52,
+                            "Maldives": 53,
+                            "Malta": 54,
+                            "Mexico": 55,
+                            "Moldova": 56,
+                            "Monaco": 57,
+                            "Montenegro": 58,
+                            "Morocco": 59,
+                            "Nepal": 60,
+                            "Netherlands": 61,
+                            "New Zealand": 62,
+                            "Nigeria": 63,
+                            "North Macedonia": 64,
+                            "Oman": 65,
+                            "Pakistan": 66,
+                            "Panama": 67,
+                            "Paraguay": 68,
+                            "Peru": 69,
+                            "Philippines": 70,
+                            "Poland": 71,
+                            "Qatar": 72,
+                            "Russia": 73,
+                            "Serbia": 74,
+                            "Singapore": 75,
+                            "Slovakia": 76,
+                            "Slovenia": 77,
+                            "South Korea": 78,
+                            "Spain": 79,
+                            "Sri Lanka": 80,
+                            "Sweden": 81,
+                            "Switzerland": 82,
+                            "Syria": 83,
+                            "Taiwan": 84,
+                            "Tajikistan": 85,
+                            "Thailand": 86,
+                            "Turkey": 87,
+                            "UAE": 88,
+                            "UK": 89,
+                            "USA": 90,
+                            "Uruguay": 91,
+                            "Uzbekistan": 92,
+                            "Vatican City": 93,
+                            "Venezuela": 94,
+                            "Vietnam": 95,
+                            "Yemen": 96
+                        },
+                        "Most_Used_Platform": {
+                            "Facebook": 0,
+                            "Instagram": 1,
+                            "KakaoTalk": 2,
+                            "LINE": 3,
+                            "LinkedIn": 4,
+                            "Snapchat": 5,
+                            "TikTok": 6,
+                            "Twitter": 7,
+                            "VKontakte": 8,
+                            "WeChat": 9,
+                            "WhatsApp": 10,
+                            "YouTube": 11
+                        },
+                        "Affects_Academic_Performance": {
+                            "No": 0,
+                            "Yes": 1
+                        },
+                        "Relationship_Status": {
+                            "Complicated": 0,
+                            "In Relationship": 1,
+                            "Single": 2
+                        }
+                    },
+                    "columns": [
+                        "Gender",
+                        "Academic_Level",
+                        "Country",
+                        "Most_Used_Platform",
+                        "Affects_Academic_Performance",
+                        "Relationship_Status"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        206.03002489524235,
+                        0.4998512568760779,
+                        0.9743497419724914,
+                        27.077266537052814,
+                        1.2830049961727474,
+                        3.4149042220472428,
+                        0.4783909049352896,
+                        1.1468867748592813,
+                        1.1146202352290069,
+                        0.5957490621409912,
+                        0.9661651375166103,
+                        1.6038192433772054
+                    ],
+                    "mean": [
+                        350.12382739212006,
+                        0.4878048780487805,
+                        1.0431519699812384,
+                        52.129455909943715,
+                        4.950656660412758,
+                        3.555347091932458,
+                        0.6454033771106942,
+                        6.820262664165103,
+                        6.215759849906191,
+                        1.4878048780487805,
+                        2.8667917448405253,
+                        6.478424015009381
+                    ],
+                    "var": [
+                        42448.37115833419,
+                        0.2498512790005948,
+                        0.9493574196818604,
+                        733.1783631186,
+                        1.6461018202042317,
+                        11.661570845756083,
+                        0.22885785792480526,
+                        1.3153492743471236,
+                        1.2423782687819664,
+                        0.3549169450418706,
+                        0.9334750729524904,
+                        2.5722361654270314
+                    ],
+                    "n_samples_seen": 533,
+                    "n_features_in": 12,
+                    "columns": [
+                        "Student_ID",
+                        "Gender",
+                        "Academic_Level",
+                        "Country",
+                        "Avg_Daily_Usage_Hours",
+                        "Most_Used_Platform",
+                        "Affects_Academic_Performance",
+                        "Sleep_Hours_Per_Night",
+                        "Mental_Health_Score",
+                        "Relationship_Status",
+                        "Conflicts_Over_Social_Media",
+                        "Addicted_Score"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "18": 0,
+                "19": 1,
+                "20": 2,
+                "21": 3,
+                "22": 4,
+                "23": 5,
+                "24": 6
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Student_ID": [
+                        "scale_normal"
+                    ],
+                    "Gender": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Academic_Level": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Country": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Avg_Daily_Usage_Hours": [
+                        "scale_normal"
+                    ],
+                    "Most_Used_Platform": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Affects_Academic_Performance": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Sleep_Hours_Per_Night": [
+                        "scale_normal"
+                    ],
+                    "Mental_Health_Score": [
+                        "scale_normal"
+                    ],
+                    "Relationship_Status": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Conflicts_Over_Social_Media": [
+                        "scale_normal"
+                    ],
+                    "Addicted_Score": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "77dccb7b-cf72-44b7-a450-b5412675edf0",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "num_class": 7,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Student_ID": [
+                    "scale_normal"
+                ],
+                "Gender": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Academic_Level": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Country": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Avg_Daily_Usage_Hours": [
+                    "scale_normal"
+                ],
+                "Most_Used_Platform": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Affects_Academic_Performance": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Sleep_Hours_Per_Night": [
+                    "scale_normal"
+                ],
+                "Mental_Health_Score": [
+                    "scale_normal"
+                ],
+                "Relationship_Status": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Conflicts_Over_Social_Media": [
+                    "scale_normal"
+                ],
+                "Addicted_Score": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_3\\X.data",
+            "y_path": "AutoML_3\\y.data",
+            "results_path": "AutoML_3"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "num_class": 7,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "multiclass_classification",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": "1.0085802071151855",
+    "train_time": 3.1242969036102295,
+    "is_stacked": false,
+    "joblib_version": "1.5.3"
+}

@@ -1,0 +1,16 @@
+if (Academic_Level <= 0.5) and (Student_ID <= 595.5) and (Student_ID > 160.0) then class: Male (proba: 100.0%) | based on 169 samples
+
+if (Academic_Level > 0.5) and (Student_ID > 155.5) and (Student_ID <= 597.5) then class: Female (proba: 100.0%) | based on 160 samples
+
+if (Academic_Level > 0.5) and (Student_ID <= 155.5) and (Sleep_Hours_Per_Night <= 5.85) then class: Female (proba: 76.19%) | based on 42 samples
+
+if (Academic_Level > 0.5) and (Student_ID > 155.5) and (Student_ID > 597.5) then class: Female (proba: 55.0%) | based on 40 samples
+
+if (Academic_Level > 0.5) and (Student_ID <= 155.5) and (Sleep_Hours_Per_Night > 5.85) then class: Male (proba: 64.86%) | based on 37 samples
+
+if (Academic_Level <= 0.5) and (Student_ID <= 595.5) and (Student_ID <= 160.0) then class: Male (proba: 54.29%) | based on 35 samples
+
+if (Academic_Level <= 0.5) and (Student_ID > 595.5) and (Student_ID > 645.5) then class: Male (proba: 100.0%) | based on 24 samples
+
+if (Academic_Level <= 0.5) and (Student_ID > 595.5) and (Student_ID <= 645.5) then class: Female (proba: 100.0%) | based on 21 samples
+

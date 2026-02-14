@@ -1,0 +1,291 @@
+{
+    "uid": "d8eb86b7-c0d7-4d0a-b5d9-d70de2fc5835",
+    "name": "6_Default_RandomForest",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Gender": {
+                            "Female": 0,
+                            "Male": 1
+                        },
+                        "Academic_Level": {
+                            "Graduate": 0,
+                            "High School": 1,
+                            "Undergraduate": 2
+                        },
+                        "Country": {
+                            "Afghanistan": 0,
+                            "Albania": 1,
+                            "Argentina": 2,
+                            "Armenia": 3,
+                            "Australia": 4,
+                            "Austria": 5,
+                            "Bahamas": 6,
+                            "Bahrain": 7,
+                            "Bangladesh": 8,
+                            "Belarus": 9,
+                            "Belgium": 10,
+                            "Bhutan": 11,
+                            "Bolivia": 12,
+                            "Bosnia": 13,
+                            "Brazil": 14,
+                            "Bulgaria": 15,
+                            "Canada": 16,
+                            "Chile": 17,
+                            "China": 18,
+                            "Colombia": 19,
+                            "Costa Rica": 20,
+                            "Cyprus": 21,
+                            "Czech Republic": 22,
+                            "Denmark": 23,
+                            "Ecuador": 24,
+                            "Egypt": 25,
+                            "Estonia": 26,
+                            "Finland": 27,
+                            "France": 28,
+                            "Georgia": 29,
+                            "Germany": 30,
+                            "Ghana": 31,
+                            "Greece": 32,
+                            "Hungary": 33,
+                            "India": 34,
+                            "Indonesia": 35,
+                            "Iraq": 36,
+                            "Ireland": 37,
+                            "Israel": 38,
+                            "Italy": 39,
+                            "Jamaica": 40,
+                            "Japan": 41,
+                            "Jordan": 42,
+                            "Kenya": 43,
+                            "Kosovo": 44,
+                            "Kuwait": 45,
+                            "Kyrgyzstan": 46,
+                            "Latvia": 47,
+                            "Lebanon": 48,
+                            "Liechtenstein": 49,
+                            "Lithuania": 50,
+                            "Luxembourg": 51,
+                            "Malaysia": 52,
+                            "Maldives": 53,
+                            "Malta": 54,
+                            "Mexico": 55,
+                            "Moldova": 56,
+                            "Monaco": 57,
+                            "Montenegro": 58,
+                            "Morocco": 59,
+                            "Nepal": 60,
+                            "Netherlands": 61,
+                            "New Zealand": 62,
+                            "Nigeria": 63,
+                            "North Macedonia": 64,
+                            "Oman": 65,
+                            "Pakistan": 66,
+                            "Panama": 67,
+                            "Paraguay": 68,
+                            "Peru": 69,
+                            "Philippines": 70,
+                            "Poland": 71,
+                            "Qatar": 72,
+                            "Russia": 73,
+                            "Serbia": 74,
+                            "Singapore": 75,
+                            "Slovakia": 76,
+                            "Slovenia": 77,
+                            "South Korea": 78,
+                            "Spain": 79,
+                            "Sri Lanka": 80,
+                            "Sweden": 81,
+                            "Switzerland": 82,
+                            "Syria": 83,
+                            "Taiwan": 84,
+                            "Tajikistan": 85,
+                            "Thailand": 86,
+                            "Turkey": 87,
+                            "UAE": 88,
+                            "UK": 89,
+                            "USA": 90,
+                            "Uruguay": 91,
+                            "Uzbekistan": 92,
+                            "Vatican City": 93,
+                            "Venezuela": 94,
+                            "Vietnam": 95,
+                            "Yemen": 96
+                        },
+                        "Most_Used_Platform": {
+                            "Facebook": 0,
+                            "Instagram": 1,
+                            "KakaoTalk": 2,
+                            "LINE": 3,
+                            "LinkedIn": 4,
+                            "Snapchat": 5,
+                            "TikTok": 6,
+                            "Twitter": 7,
+                            "VKontakte": 8,
+                            "WeChat": 9,
+                            "WhatsApp": 10,
+                            "YouTube": 11
+                        },
+                        "Affects_Academic_Performance": {
+                            "No": 0,
+                            "Yes": 1
+                        },
+                        "Relationship_Status": {
+                            "Complicated": 0,
+                            "In Relationship": 1,
+                            "Single": 2
+                        }
+                    },
+                    "columns": [
+                        "Gender",
+                        "Academic_Level",
+                        "Country",
+                        "Most_Used_Platform",
+                        "Affects_Academic_Performance",
+                        "Relationship_Status"
+                    ]
+                }
+            ],
+            "categorical_y": {
+                "18": 0,
+                "19": 1,
+                "20": 2,
+                "21": 3,
+                "22": 4,
+                "23": 5,
+                "24": 6
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Gender": [
+                        "categorical_to_int"
+                    ],
+                    "Academic_Level": [
+                        "categorical_to_int"
+                    ],
+                    "Country": [
+                        "categorical_to_int"
+                    ],
+                    "Most_Used_Platform": [
+                        "categorical_to_int"
+                    ],
+                    "Affects_Academic_Performance": [
+                        "categorical_to_int"
+                    ],
+                    "Relationship_Status": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Random Forest",
+            "algorithm_short_name": "Random Forest",
+            "uid": "a2ae2c25-aa5d-4600-8eeb-a344c1c902e1",
+            "params": {
+                "model_type": "Random Forest",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "criterion": "gini",
+                "max_features": 0.9,
+                "min_samples_split": 30,
+                "max_depth": 4,
+                "seed": 6,
+                "eval_metric_name": "logloss",
+                "num_class": 7,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 100,
+            "train_cant_improve_limit": 1,
+            "min_steps": 1,
+            "max_steps": 50,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Gender": [
+                    "categorical_to_int"
+                ],
+                "Academic_Level": [
+                    "categorical_to_int"
+                ],
+                "Country": [
+                    "categorical_to_int"
+                ],
+                "Most_Used_Platform": [
+                    "categorical_to_int"
+                ],
+                "Affects_Academic_Performance": [
+                    "categorical_to_int"
+                ],
+                "Relationship_Status": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_3\\X.data",
+            "y_path": "AutoML_3\\y.data",
+            "results_path": "AutoML_3"
+        },
+        "learner": {
+            "model_type": "Random Forest",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "criterion": "gini",
+            "max_features": 0.9,
+            "min_samples_split": 30,
+            "max_depth": 4,
+            "seed": 6,
+            "eval_metric_name": "logloss",
+            "num_class": 7,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "multiclass_classification",
+        "explain_level": 2,
+        "name": "6_Default_RandomForest",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "6_Default_RandomForest\\learner_fold_0.random_forest"
+    ],
+    "predictions_fname": "6_Default_RandomForest\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": "0.856031477579818",
+    "train_time": 6.899003028869629,
+    "is_stacked": false,
+    "joblib_version": "1.5.3"
+}

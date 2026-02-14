@@ -1,0 +1,13 @@
+feature,shap_importance
+Academic_Level,1.6309082451482877
+Mental_Health_Score,0.4285938838272968
+Most_Used_Platform,0.32504838878669867
+Conflicts_Over_Social_Media,0.30680602078951336
+Avg_Daily_Usage_Hours,0.28947484128252615
+Relationship_Status,0.15568893043029094
+Sleep_Hours_Per_Night,0.09368144057519444
+Affects_Academic_Performance,0.07157688511571633
+Country,0.06865603954268178
+Addicted_Score,0.04614083551602372
+Student_ID,0.031341432457438916
+Age,0.025621627036092665

@@ -1,0 +1,484 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Baseline",
+            "Linear",
+            "Decision Tree",
+            "Random Forest",
+            "Xgboost",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 0.05772280693054199
+            },
+            {
+                "model_name": "1_Baseline",
+                "model_type": "Baseline",
+                "fit_level": "simple_algorithms",
+                "train_time": 0.4803657531738281
+            },
+            {
+                "model_name": "2_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 6.235276699066162
+            },
+            {
+                "model_name": "3_Linear",
+                "model_type": "Linear",
+                "fit_level": "simple_algorithms",
+                "train_time": 8.819270849227905
+            },
+            {
+                "model_name": "4_Default_Xgboost",
+                "model_type": "Xgboost",
+                "fit_level": "default_algorithms",
+                "train_time": 4.4062418937683105
+            },
+            {
+                "model_name": "5_Default_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "default_algorithms",
+                "train_time": 6.5282886028289795
+            },
+            {
+                "model_name": "6_Default_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "default_algorithms",
+                "train_time": 9.17724323272705
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 5.4576256275177
+            }
+        ],
+        "is_hill_climbing": false,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_2\\X.data",
+                    "y_path": "AutoML_2\\y.data",
+                    "results_path": "AutoML_2"
+                },
+                "learner": {
+                    "model_type": "Baseline",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "1_Baseline",
+                "status": "trained",
+                "final_loss": 0.6931471805599453,
+                "train_time": 1.519660472869873,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Academic_Level": [
+                            "categorical_to_int"
+                        ],
+                        "Country": [
+                            "categorical_to_int"
+                        ],
+                        "Most_Used_Platform": [
+                            "categorical_to_int"
+                        ],
+                        "Affects_Academic_Performance": [
+                            "categorical_to_int"
+                        ],
+                        "Relationship_Status": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_2\\X.data",
+                    "y_path": "AutoML_2\\y.data",
+                    "results_path": "AutoML_2"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "criterion": "gini",
+                    "max_depth": 3,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "2_DecisionTree",
+                "status": "trained",
+                "final_loss": 0.4035805247406076,
+                "train_time": 8.297045946121216,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Student_ID": [
+                            "scale_normal"
+                        ],
+                        "Age": [
+                            "scale_normal"
+                        ],
+                        "Academic_Level": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Country": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Avg_Daily_Usage_Hours": [
+                            "scale_normal"
+                        ],
+                        "Most_Used_Platform": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Affects_Academic_Performance": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Sleep_Hours_Per_Night": [
+                            "scale_normal"
+                        ],
+                        "Mental_Health_Score": [
+                            "scale_normal"
+                        ],
+                        "Relationship_Status": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Conflicts_Over_Social_Media": [
+                            "scale_normal"
+                        ],
+                        "Addicted_Score": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_2\\X.data",
+                    "y_path": "AutoML_2\\y.data",
+                    "results_path": "AutoML_2"
+                },
+                "learner": {
+                    "model_type": "Linear",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "3_Linear",
+                "status": "trained",
+                "final_loss": 0.47306455994837016,
+                "train_time": 10.301800966262817,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Academic_Level": [
+                            "categorical_to_int"
+                        ],
+                        "Country": [
+                            "categorical_to_int"
+                        ],
+                        "Most_Used_Platform": [
+                            "categorical_to_int"
+                        ],
+                        "Affects_Academic_Performance": [
+                            "categorical_to_int"
+                        ],
+                        "Relationship_Status": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_2\\X.data",
+                    "y_path": "AutoML_2\\y.data",
+                    "results_path": "AutoML_2"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary:logistic",
+                    "eta": 0.075,
+                    "max_depth": 6,
+                    "min_child_weight": 1,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "seed": 4,
+                    "eval_metric": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "4_Default_Xgboost",
+                "status": "trained",
+                "final_loss": 0.19221935286378056,
+                "train_time": 7.119257211685181,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Student_ID": [
+                            "scale_normal"
+                        ],
+                        "Age": [
+                            "scale_normal"
+                        ],
+                        "Academic_Level": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Country": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Avg_Daily_Usage_Hours": [
+                            "scale_normal"
+                        ],
+                        "Most_Used_Platform": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Affects_Academic_Performance": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Sleep_Hours_Per_Night": [
+                            "scale_normal"
+                        ],
+                        "Mental_Health_Score": [
+                            "scale_normal"
+                        ],
+                        "Relationship_Status": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Conflicts_Over_Social_Media": [
+                            "scale_normal"
+                        ],
+                        "Addicted_Score": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_2\\X.data",
+                    "y_path": "AutoML_2\\y.data",
+                    "results_path": "AutoML_2"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 5,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "5_Default_NeuralNetwork",
+                "status": "trained",
+                "final_loss": 0.4507411038217734,
+                "train_time": 8.198753833770752,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Academic_Level": [
+                            "categorical_to_int"
+                        ],
+                        "Country": [
+                            "categorical_to_int"
+                        ],
+                        "Most_Used_Platform": [
+                            "categorical_to_int"
+                        ],
+                        "Affects_Academic_Performance": [
+                            "categorical_to_int"
+                        ],
+                        "Relationship_Status": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_2\\X.data",
+                    "y_path": "AutoML_2\\y.data",
+                    "results_path": "AutoML_2"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 6,
+                    "eval_metric_name": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "6_Default_RandomForest",
+                "status": "trained",
+                "final_loss": 0.27349117586864063,
+                "train_time": 11.005161762237549,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": 0.17786836601279507,
+                "train_time": 5.4576256275177
+            }
+        ]
+    },
+    "adjust_validation": false
+}

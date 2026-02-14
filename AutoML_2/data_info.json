@@ -1,0 +1,69 @@
+{
+    "columns": [
+        "Student_ID",
+        "Age",
+        "Academic_Level",
+        "Country",
+        "Avg_Daily_Usage_Hours",
+        "Most_Used_Platform",
+        "Affects_Academic_Performance",
+        "Sleep_Hours_Per_Night",
+        "Mental_Health_Score",
+        "Relationship_Status",
+        "Conflicts_Over_Social_Media",
+        "Addicted_Score"
+    ],
+    "rows": 705,
+    "cols": 12,
+    "target_is_numeric": false,
+    "columns_info": {
+        "Student_ID": [
+            "scale"
+        ],
+        "Age": [
+            "scale"
+        ],
+        "Academic_Level": [
+            "categorical",
+            "few_categories"
+        ],
+        "Country": [
+            "categorical",
+            "many_categories"
+        ],
+        "Avg_Daily_Usage_Hours": [
+            "scale"
+        ],
+        "Most_Used_Platform": [
+            "categorical",
+            "few_categories"
+        ],
+        "Affects_Academic_Performance": [
+            "categorical",
+            "few_categories"
+        ],
+        "Sleep_Hours_Per_Night": [
+            "scale"
+        ],
+        "Mental_Health_Score": [
+            "scale"
+        ],
+        "Relationship_Status": [
+            "categorical",
+            "few_categories"
+        ],
+        "Conflicts_Over_Social_Media": [
+            "scale"
+        ],
+        "Addicted_Score": [
+            "scale"
+        ]
+    },
+    "target_info": [
+        "convert_0_1"
+    ],
+    "n_features": 12,
+    "is_sample_weighted": false,
+    "is_fairness_applied": false,
+    "n_classes": 2
+}
