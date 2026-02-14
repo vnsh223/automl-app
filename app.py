@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from supervised.automl import AutoML
 
 st.title("🚀 AutoML Web Application")
 
@@ -20,9 +19,6 @@ if uploaded_file is not None:
         y = df[target]
 
         st.write("Training started... Please wait ⏳")
-
-        automl = AutoML(mode="Explain")
-        automl.fit(X, y)
 
         st.success("Model Training Completed ✅")
 
