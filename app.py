@@ -20,12 +20,11 @@ if uploaded_file is not None:
 
     # Train button (ONLY ONE BUTTON)
     if st.button("Train Model"):
-
-    X = df.drop(columns=[target])
-    y = df[target]
+        X = df.drop(columns=[target])
+        y = df[target]
 
     # Convert categorical columns into numbers
-    X = pd.get_dummies(X)
+       X = pd.get_dummies(X)
 
     # If target is text → convert it also
     if y.dtype == 'object':
