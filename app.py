@@ -21,7 +21,3 @@ if uploaded_file is not None:
         st.write("Training started... Please wait ⏳")
 
         st.success("Model Training Completed ✅")
-
-        leaderboard = automl.get_leaderboard()
-        st.write("### Model Leaderboard")
-        st.write(leaderboard)
