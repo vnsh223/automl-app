@@ -18,22 +18,32 @@ if uploaded_file is not None:
     # Select target column
     target = st.selectbox("Select Target Column", df.columns)
 
-    # Train button (ONLY ONE BUTTON)
-    if st.button("Train Model", key="train_model_btn"):
+    # Train button (ONLY ONE BUTTON
+    if st.button("Train Model"):
 
-        X = df.drop(columns=[target])
-        y = df[target]
+    X = df.drop(columns=[target])
+    y = df[target]
 
-        st.write("Training started... Please wait ⏳")
+    # Convert categorical columns into numbers
+    X = pd.get_dummies(X)
 
-        X_train, X_test, y_train, y_test = train_test_split(
-            X, y, test_size=0.2, random_state=42
-        )
+    # If target is text → convert it also
+    if y.dtype == 'object':
+        y = pd.factorize(y)[0]
 
-        model = RandomForestClassifier()
-        model.fit(X_train, y_train)
+    st.write("Training started... Please wait ⏳")
 
-        accuracy = model.score(X_test, y_test)
+    from sklearn.model_selection import train_test_split
+    from sklearn.ensemble import RandomForestClassifier
 
-        st.success("Model Training Completed ✅")
-        st.write(f"Model Accuracy: {accuracy:.2f}")
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
+
+    model = RandomForestClassifier()
+    model.fit(X_train, y_train)
+
+    accuracy = model.score(X_test, y_test)
+
+    st.success("Model Training Completed ✅")
+    st.write(f"Accuracy: {accuracy:.2f}")
